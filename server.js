@@ -24,15 +24,15 @@ app.get("/paystack", (req, res) => {
     },
   };
 
-  const req = https
-    .request(options, (res) => {
+  const reqPaystack = https
+    .request(options, (resPaystack) => {
       let data = "";
 
-      res.on("data", (chunk) => {
+      resPaystack.on("data", (chunk) => {
         data += chunk;
       });
 
-      res.on("end", () => {
+      resPaystack.on("end", () => {
         console.log(JSON.parse(data));
         //res.send(data);
       });
@@ -41,8 +41,8 @@ app.get("/paystack", (req, res) => {
       console.error(error);
     });
 
-  req.write(params);
-  req.end();
+  reqPaystack.write(params);
+  reqPaystack.end();
   //PAYSTACK CODE END
 });
 
