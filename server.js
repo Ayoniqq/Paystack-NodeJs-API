@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 const path = require("path");
+const cors = require("cors");
 
 app.get("/paystack", (req, res) => {
   //PAYSTACK CODE
