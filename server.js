@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 8080;
 const path = require("path");
 const cors = require("cors");
 
+//INITIATE TRANSACTION
 app.get("/paystack", (req, res) => {
   //PAYSTACK CODE
   const https = require("https");
