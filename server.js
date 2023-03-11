@@ -49,16 +49,16 @@ app.get("/paystack", (req, res) => {
 });
 
 //TRANSACTION VERIFICATION
-app.get("/transaction/verify/:reference", () => {
+app.get("/transaction/verify/:reference", (req, res) => {
   const https = require("https");
 
   const options = {
     hostname: "api.paystack.co",
     port: 443,
-    path: "/transaction/verify/:reference",
+    path: "/transaction/verify/:reference", //y2nojxbjag
     method: "GET",
     headers: {
-      Authorization: "Bearer SECRET_KEY",
+      Authorization: "Bearer sk_test_01e1955f5e1713cba43d95851dde3987ae366fc5",
     },
   };
 
@@ -72,6 +72,7 @@ app.get("/transaction/verify/:reference", () => {
 
       res.on("end", () => {
         console.log(JSON.parse(data));
+        res.send(data);
       });
     })
     .on("error", (error) => {
