@@ -34,7 +34,7 @@ app.get("/paystack", (req, res) => {
 
       resPaystack.on("end", () => {
         console.log(JSON.parse(data));
-        resPaystack.send(data);
+        res.send(data);
       });
     })
     .on("error", (error) => {
