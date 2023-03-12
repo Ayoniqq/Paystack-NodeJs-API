@@ -73,7 +73,7 @@ app.get("/transaction/verify/:reference", (req, res) => {
 
       res.on("end", () => {
         console.log(JSON.parse(data));
-        //res.send(data);
+        //res.send(data);;
       });
     })
     .on("error", (error) => {
