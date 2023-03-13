@@ -82,5 +82,5 @@ app.get("/transaction/verify/:reference", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`LISTENING ON PORT:${PORT}`); //LISTEN
+  console.log(`LISTENING ON PORT:${PORT}`);
 });
