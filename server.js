@@ -56,7 +56,7 @@ app.get("/transaction/verify/:reference", (req, res) => {
   const options = {
     hostname: "api.paystack.co",
     port: 443,
-    path: "/transaction/verify/4rrtbslonh", //y2nojxbjag //4rrtbslonh
+    path: "/transaction/verify/ezn79p23a9", //y2nojxbjag //4rrtbslonh
     method: "GET",
     headers: {
       Authorization: "Bearer sk_test_01e1955f5e1713cba43d95851dde3987ae366fc5",
