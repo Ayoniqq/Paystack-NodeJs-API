@@ -78,6 +78,7 @@ app.get("/transaction/verify/:reference", (req, res) => {
     })
     .on("error", (error) => {
       console.error(error);
+      console.log("ERROR DEY OH");
     });
 });
 
