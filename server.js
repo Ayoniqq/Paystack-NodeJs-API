@@ -78,7 +78,7 @@ app.get("/transaction/verify/:reference", (req, res) => {
     })
     .on("error", (error) => {
       console.error(error);
-      console.log("ERROR 00000");
+      console.log("ERROR 00000"); //
     });
 });
 
